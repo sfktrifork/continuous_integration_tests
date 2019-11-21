@@ -15,4 +15,13 @@ defmodule MyTinyLibTest do
   test "return error on negative age" do
     assert {:error, _} = MyTinyLib.greeting_for_user("Sebastian", -1)
   end
+
+  test "greets animals with names" do
+    assert {:error, "I don't know what to call you!"} = MyTinyLib.greeting_for_animal()
+    assert {:error, "I don't know what to call you!"} = MyTinyLib.greeting_for_animal("")
+  end
+
+  test "greets animals without names" do
+    assert {:ok, "Hello, little Herbert!"} = MyTinyLib.greeting_for_animal("Herbert")
+  end
 end
