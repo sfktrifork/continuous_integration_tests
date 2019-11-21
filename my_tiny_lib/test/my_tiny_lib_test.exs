@@ -24,4 +24,8 @@ defmodule MyTinyLibTest do
   test "greets animals without names" do
     assert {:ok, "Hello, little Herbert!"} = MyTinyLib.greeting_for_animal("Herbert")
   end
+
+  test "greets monsters" do
+    assert {:ok, "AAAAAAAAAAAAAAAH!"} = MyTinyLib.greeting_for_monsters()
+  end
 end
