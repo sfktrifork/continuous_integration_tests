@@ -16,4 +16,8 @@ defmodule MyTinyLib do
   def greeting_for_user(_, _, language) do
    {:error, "I don't understand #{language}."}
   end
+
+  def greeting_for_animal(name \\ "")
+  def greeting_for_animal(""), do: {:error, "I don't know what to call you!"}
+  def greeting_for_animal(name), do: {:ok, "Hello, little #{name}!"}
 end
